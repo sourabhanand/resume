@@ -1,0 +1,150 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2014 Todd C. Miller <Todd.Miller@sudo.ws> http://www.sudo.ws/todd
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage[hidelinks, colorlinks=true, urlcolor=blue, pdfborder={0 0 0}]{hyperref}
+\usepackage{cprotect}
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\LARGE Sourabh Anand}  & +91-9487437120\\
+{}\verb!#!201, Shreya Carnation &  \href{mailto:sourabhanand.cs@gmail.com}{sourabhanand.cs@gmail.com} \\
+Kondapur, Hyderabad, India  & \href{https://github.com/sourabhanand/}{github.com/sourabhanand}\\
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Professional Summary}
+\begin{itemize}
+\itemsep0em 
+\item 4+ years of extensive software development experience in multiple domains
+\item Worked on development of \textbf{Deep Learning} based image recognition systems for embedded platforms
+\item Have successfully applied Machine Learning techniques to predict \textit{strategies} which will help customer designs meet timing constraints on Xilinx's {\sc FPGAs}
+\item Experience in working with large datasets and using Python libraries such as \textbf{pandas, NumPy, scipy} etc.
+\item Pursuing part-time \textbf{M.Tech} in \textbf{Data Science} from {\sc IIT}, Hyderabad
+\end{itemize}
+
+\resheading{Skills}
+\begin{itemize}
+\itemsep0em 
+\item \textbf{Languages:}
+C, C{}\verb!++!, Python, {\sc UNIX} Shell Scripting
+\item \textbf{Web Technologies:}
+Familiar with {\sc HTML5}, {\sc CSS/CSS3}, {\sc PHP}, JavaScript, jQuery, Bootstrap
+\item \textbf{Areas of Interest:}
+Data Science, Machine Learning, Object Oriented Paradigm, Algorithms
+\item \textbf{Libraries/Frameworks:}
+NumPy, pandas, scikit-learn, Caffe, Tensorflow, Darknet YOLO
+\item \textbf{Miscellaneous:}
+Qt, PyQt, Mercurial, Git, Perforce
+\end{itemize}
+
+
+\resheading{Work Experience}
+\begin{itemize}
+\item
+	\ressubheading{Xilinx, Inc.}{Hyderabad, Telangana}{Software Engineer 2}{Dec, 2016 - Present}
+	\begin{itemize}
+		\resitem{Develop a \textbf{Random Forest based Machine Learning model} to show user the strategies to run that will help customer designs meet timing constraints.}
+		\resitem{Developed \textbf{visualization/reporting} tools to aid debugging of wrong predictions by ML model.}
+		\resitem{Work on development of Device-Model verification systems for {\sc FPGA}(Field-Programmable Gate Arrays)}
+		\resitem{Developing a \textit{Chip-Pruner}: A tool that helps in scalable simulation of an {\sc FPGA} Netlist by pruning out unused portion based on software implementation of user design}
+		\resitem{Work on reducing memory and runtime of the tool for efficiently running large user designs}
+		\resitem{Add additional features in the tool to support Xilinx’s next generation {\sc FPGA}}
+		\resitem{Debug and fix bugs as and when uncovered by the design and verification team}
+		\vspace*{5px}
+		\\\textit{Technologies:} \cprotect\textbf{Python, Machine Learning, scikit-learn, scipy, pandas, C{}\verb!++!, STL, Boost}
+	\end{itemize}
+\item
+	\ressubheading{MulticoreWare, Inc.}{Chennai, Tamil Nadu}{Senior Software Engineer}{June, 2016 - Nov, 2016}
+	\vspace*{10px}
+	\\\textbf{\quad Deep Learning based Real Time Vehicle Detection System}
+	\begin{itemize}
+		\vspace*{-5px}
+		\resitem{Developed a Real time Vehicle Detection System for Cadence VP5 DSP platform}
+		\resitem{Designed and trained a light-weight \textbf{Convolutional Neural Network} (CNN) for vehicle classification considering memory and compute capability constraints}
+		\resitem{Read research papers and trained smaller models using \textbf{network pruning and compression}}
+		\resitem{Implemented \textit{Forward Propagation} phase of CNN for vehicle detection in C and Cadence SIMD intrinsics}
+		\resitem{Redesigned the convolution kernels with better data layout for max SIMD width utilization}
+		\vspace*{5px}
+		\\\textit{Technologies:} \textbf{Neural Networks, Deep Learning, Darknet YOLO}
+	\end{itemize}
+\pagebreak
+	\vspace*{1px}
+	\ressubheading{MulticoreWare, Inc.}{Chennai, Tamil Nadu}{Software Engineer}{July, 2014 - June, 2016}
+	\vspace*{10px}
+	\\\textbf{\quad Deep Learning based Image Tagging Tool}
+	\begin{itemize}
+		\vspace*{-5px}
+		\resitem{Developed an Image Tagging software - Labeling Tool for internal data tagging team}
+		\resitem{Designed all the modules and overall workflow of application and wrote design document for the same}
+		\resitem{Customized and enhanced the application making it superfast with exceptional features of \textbf{automatic annotation using CNN} (Convolutional Neural Networks)}
+		\resitem{Used \href{https://arxiv.org/abs/1506.01497}{R-CNN} and \href{https://pjreddie.com/darknet/yolo/}{Darknet YOLO} based models for automatic annotation of images and integrated the same to the appllication}
+		\resitem{Wrote backend MySQL queries for storing and retrieving user information and other statistical data}
+		\resitem{Designed UI prototypes of the application using mockup tools}
+		\resitem{Added customizable shortcuts to the application for easy and faster usage}
+		\vspace*{5px}
+		\\\textit{Technologies:} \textbf{Neural Networks, R-CNN, Darknet, Python, PyQt, MySQL}
+	\end{itemize}
+
+\end{itemize}
+
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheading{Indian Institute of Technology}{Hyderabad, Telangana}{M.Tech in Data Science}{Aug, 2018 - Present}
+	\begin{itemize}
+		\resitem{Part-Time classes}
+	\end{itemize}
+\item
+	\ressubheading{Vellore Institute of Technology}{Vellore, Tamil nadu}{B.Tech in Computer Science and Engineering}{July, 2010 - May, 2014}
+	\begin{itemize}
+		\resitem{CGPA: 9.03/10}
+	\end{itemize}
+\item
+	\ressubheading{Chinmaya Vidyalaya}{Bokaro, Jharkhand}{12th, PCM}{July, 2007 - May, 2009}
+	\begin{itemize}
+		\resitem{Marks: 87.2\%}
+	\end{itemize}
+\item
+	\ressubheading{Sido Kanhu High School}{Dumka, Jharkhand}{10th}{May, 2007}
+	\begin{itemize}
+		\resitem{Marks: 91.8\%}
+	\end{itemize}
+\end{itemize}
+
+
+\end{document}
